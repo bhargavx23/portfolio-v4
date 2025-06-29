@@ -16,7 +16,7 @@ body {
   cursor: url(./svgs/icons8-cursor-24.png), auto;
 }
 :root {
-  --bg-color: rgb(26, 19, 29);
+  --bg-color: rgb(14, 9, 17);
   --text-color: white;
   --content-color: rgba(126, 125, 125, 0.774);
   --btn-bg: rgb(74, 58, 88);
