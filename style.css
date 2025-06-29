@@ -618,8 +618,8 @@ a {
 .p2,
 .p3 {
   max-height: max-content;
-  height: 290px;
-  width: 280px;
+  height: 220px;
+  width: 250px;
   max-width: max-content;
   display: flex;
   justify-content: space-between;
