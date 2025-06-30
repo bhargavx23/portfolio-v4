@@ -85,7 +85,7 @@ html {
   background: var(--bg-color);
   justify-self: center;
   height: 100vh;
-  width: 100%;
+  width: 90%;
   margin: 0 0;
   animation: op2 ease forwards;
 }
@@ -215,7 +215,7 @@ html {
 }
 .home {
   min-height: 89vh;
-  max-width: 90%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1007,6 +1007,7 @@ footer {
     margin: 0;
     box-sizing: border-box;
     width: 100vw;
+    justify-self: center;
   }
   html {
     scroll-behavior: smooth;
@@ -1136,7 +1137,7 @@ footer {
   }
   .addOn {
     width: 100%;
-    border: 2p solid white;
+    /* border: 2p solid white; */
     display: none;
   }
 
