@@ -95,7 +95,6 @@ html {
 
 .headpart {
   padding-top: 50px;
-
   height: 11vh;
   width: 100%;
   display: flex;
@@ -182,13 +181,12 @@ html {
 }
 
 .layer {
-  /* height: 100vh;
-  width: 100%; */
-  position: fixed;
-  inset: 0;
   display: none;
+  position: fixed;
+  min-height: 100%;
+  max-width: 100%;
+  inset: 0;
 }
-
 .layer p {
   z-index: 100;
   position: absolute;
@@ -252,13 +250,11 @@ html {
   position: absolute;
   overflow: hidden;
   max-width: 99vw;
-
   justify-self: center;
   justify-content: center;
   align-items: center;
   height: auto;
   margin: 0 0;
-
   padding: 0 0;
 }
 .addOn .backtext {
@@ -426,11 +422,19 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border: 2px solid white;  */
   align-items: center;
   animation: op2 ease both;
   animation-range: entry 0% cover 60%;
   animation-timeline: view();
+}
+.profile-img img {
+  position: absolute;
+  max-height: 120px;
+  max-width: 120px;
+
+  top: 120px;
+  left: 100px;
+  border-radius: 50%;
 }
 .icon1 {
   position: absolute;
@@ -500,9 +504,6 @@ a {
   justify-self: center;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid white; */
-
-  /* justify-content: space-around; */
 }
 .about-matter p {
   font-size: clamp(22px, 10px, 16px);
@@ -696,11 +697,9 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 2px solid white; */
 }
 .project-link {
   height: 30px;
-  /* align-items: center; */
   display: flex;
   rotate: 90deg;
   padding: 5px;
@@ -723,7 +722,6 @@ a {
   font-size: 22px;
   font-weight: 600;
   text-align: center;
-  /* padding-top: 20px; */
   color: white;
 }
 
@@ -741,7 +739,6 @@ a {
 
 .skills {
   width: 100%;
-  /* border: 2px solid white; */
   min-height: 50vh;
   justify-content: center;
   align-content: center;
@@ -886,7 +883,6 @@ a {
   justify-content: center;
   border-radius: 60px;
   align-items: center;
-  /* box-shadow: 0px 0px 20px skyblue; */
   padding: 25px;
   animation: slidedown2, op2 ease both;
   animation-timeline: view();
@@ -909,7 +905,6 @@ a {
   font-weight: 500;
   background: var(--bg-color);
   font-size: 20px;
-  /* box-shadow: 0px 0px 12px skyblue; */
   font-family: poppins, sans-serif;
   transition: all 0.3s ease;
 }
@@ -971,14 +966,12 @@ button {
 }
 
 .form button:hover {
-  /* transform: scale(1.01); */
   background: var(--bg-color);
   color: var(--text-color);
   border: 2px solid rgb(241, 149, 241);
 }
 button:active {
   transform: scale(0.9);
-  /* transition: all 0.6s ease ; */
 }
 footer {
   height: 55px;
@@ -1016,7 +1009,6 @@ footer {
   .headpart {
     width: 100%;
     height: min-content;
-    /* border: 2px solid white; */
     box-shadow: none;
     display: flex;
     background: var(--bg-color);
@@ -1028,8 +1020,6 @@ footer {
     z-index: 10000000;
     margin-right: 7px;
     animation: op2 ease both;
-    /* position: fixed;
-    top: 0; */
   }
 
   .navs {
@@ -1133,11 +1123,9 @@ footer {
     align-items: center;
     background: var(--bg-color);
     animation: op2 ease 2s both;
-    /* position: relative; */
   }
   .addOn {
     width: 100%;
-    /* border: 2p solid white; */
     display: none;
   }
 
@@ -1158,9 +1146,9 @@ footer {
     background: rgba(37, 37, 37, 0.13);
     backdrop-filter: blur(18px);
     position: fixed;
+    min-height: 100%;
+    max-width: 100%;
     inset: 0;
-    margin: 0;
-    padding: 0;
   }
   .layer p {
     font-size: 35px;
@@ -1174,20 +1162,11 @@ footer {
   .navs.show ~ .layer {
     display: flex;
     opacity: 1;
+    scale: 1;
+    right: 0;
+    left: 0;
   }
 
-  /* .homeright {
-    display: flex;
-    height: 40%;
-    align-items: flex-end;
-    justify-content: center;
-    justify-self: center;
-    width: 100%;
-    margin-top: 0;
-    padding: 0;
-    text-align: center;
-    animation: op2 ease 3s both;
-  } */
   .name {
     width: 100%;
     font-size: 39px;
@@ -1198,10 +1177,8 @@ footer {
     font-size: 49px;
   }
   .homeleft {
-    /* border: 2px solid white; */
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-direction: column;
     width: 100%;
     height: 100%;
@@ -1212,14 +1189,12 @@ footer {
     margin-top: 10px;
     padding-top: 10px;
     font-size: 16px;
-    /* border: 2px solid white; */
     font-weight: 300;
     justify-self: center;
     color: rgba(255, 255, 255, 0.699);
     width: 100%;
     height: 100%;
     padding: 0 0;
-
     margin: 20px 0;
   }
   .para b {
@@ -1229,6 +1204,7 @@ footer {
     font-weight: 700;
     padding: 0;
   }
+
   @keyframes type {
     0% {
       width: 0%;
@@ -1237,6 +1213,7 @@ footer {
       width: 77%;
     }
   }
+
   @keyframes op {
     0% {
       opacity: 0;
@@ -1247,6 +1224,7 @@ footer {
       scale: 1;
     }
   }
+
   .homeright img {
     height: 270px;
     width: 270px;
@@ -1258,6 +1236,7 @@ footer {
     background-position: center;
     background-size: cover;
   }
+
   @keyframes slidedown {
     from {
       transform: translateY(-100%);
@@ -1267,6 +1246,7 @@ footer {
       transform: translateY(0);
     }
   }
+
   @keyframes slidedown2 {
     from {
       transform: translateY(100%);
@@ -1284,7 +1264,6 @@ footer {
     justify-self: center;
     justify-content: center;
     height: max-content;
-    /* border: 2px solid black; */
     margin-bottom: 10px;
     animation: op2 ease 7s both;
   }
@@ -1342,7 +1321,6 @@ footer {
   .about-mat {
     width: 100%;
     min-height: max-content;
-    /* border: 2px solid white; */
     padding: 10px;
     margin-top: 50px;
     justify-self: center;
@@ -1373,7 +1351,6 @@ footer {
     animation: op2, slidedown ease both;
     animation-timeline: view();
     animation-range: entry 50% cover 50%;
-    /* text-align: center; */
     justify-self: center;
   }
   @keyframes bg {
@@ -1393,7 +1370,6 @@ footer {
     flex-direction: column;
     justify-self: center;
     position: relative;
-    /* border: 2px solid white; */
     animation: op2 ease both;
     animation-timeline: view();
     animation-range: entry 30% cover 0%;
@@ -1443,7 +1419,6 @@ footer {
     animation: op2, slidedown2 both ease;
     animation-timeline: view();
     animation-range: entry 15% cover 50%;
-    /* border: 2px solid black; */
   }
 
   .p2,
@@ -1521,7 +1496,6 @@ footer {
   .skills {
     min-height: min-content;
     min-width: max-content;
-    /* border: 2px solid white; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1573,7 +1547,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid white; */
     animation: op2 ease both;
     animation-timeline: view();
     animation-range: entry 50% cover 50%;
@@ -1607,7 +1580,6 @@ footer {
   .contactheading {
     position: absolute;
     top: 40px;
-    /* left: 20px; */
     font-size: 35px;
   }
 
@@ -1626,7 +1598,6 @@ footer {
   }
   footer {
     min-height: fit-content;
-    /* border: 2px solid white; */
     max-width: 100%;
   }
   footer .footname {
@@ -1657,7 +1628,6 @@ footer {
     position: relative;
   }
   .cont {
-    /* overflow-x: hidden; */
     width: 100%;
     position: relative;
   }
@@ -1667,10 +1637,7 @@ footer {
     font-weight: bold;
     color: var(--text-color);
   }
-  /* .logo-text::after {
-    height: 4px;
-    background: rgb(5, 183, 253);
-  } */
+
   .hamburger {
     display: flex;
     font-size: 35px;
@@ -1695,7 +1662,6 @@ footer {
     gap: 5px;
     right: -100%;
     scale: 0;
-    /* background: rgba(0, 0, 0, 0.822); */
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -1726,14 +1692,6 @@ footer {
     margin-left: 20px;
     transition: all ease 0.7s;
   }
-  /* .layer {
-    background: rgba(54, 52, 52, 0.397);
-    display: none;
-    backdrop-filter: blur(20px);
-    position: fixed;
-    inset: 0;
-    z-index: 100;
-    /* height: 100vh; */
 
   #welcomesign {
     font-size: 100px;
@@ -1778,7 +1736,6 @@ footer {
     max-height: 100%;
     padding: 20px;
     width: 100%;
-    /* z-index: 0; */
   }
 
   .homeleft {
@@ -1799,7 +1756,6 @@ footer {
   .para {
     width: 100%;
     font-size: 3rem;
-    /* border: 2px solid white; */
     color: rgb(160, 150, 150);
     font-size: clamp(22px, 2vw, 22px);
   }
@@ -1824,10 +1780,6 @@ footer {
       rgba(245, 234, 248, 0)
     );
     -webkit-background-clip: text;
-    /* animation: op2, slidedown 9s ease; */
-    /* animation-timeline: view();
-  animation-range: entry 80% cover 20%; */
-
     font-weight: 600;
   }
   .para b {
@@ -1937,7 +1889,6 @@ footer {
   .projectcards {
     width: 100%;
     height: 100%;
-    /* border: 2px solid black; */
     flex-direction: row;
     flex-wrap: wrap;
     display: flex;
